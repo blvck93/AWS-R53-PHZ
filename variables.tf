@@ -15,18 +15,18 @@ variable "us_region" {
 
 variable "eu_phz_name" {
   type    = list(string)
-  default = ["eq.internal", "uk.eq.internal"]
+  default = ["kamil.com", "kamil.internal"]
 }
 
 variable "us_phz_name" {
   type    = list(string)
-  default = ["eq.internal", "us.eq.internal"]
+  default = ["kamil.com", "kamil.internal"]
 }
 
-variable "role_arn" {
-  type        = string
-  description = "role arn for network hub account"
-}
+#variable "role_arn" {
+#  type        = string
+#  description = "role arn for network hub account"
+#}
 
 variable "target" {
   description = "object for subdomains delegated to accounts"
