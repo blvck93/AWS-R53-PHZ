@@ -3,6 +3,6 @@ module "public_blvck_ovh" {
   providers = {
     aws.network_hub = aws.network_hub_us
   }
-#  region   = var.target.tooling-nonprod.region
+  region   = "us-east-1"
   phz_name = "blvck.ovh"
 }
