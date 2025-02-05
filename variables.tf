@@ -28,13 +28,13 @@ variable "us_phz_name" {
 #  description = "role arn for network hub account"
 #}
 
-variable "target" {
-  description = "object for subdomains delegated to accounts"
-}
-
-variable "tags" {
-  description = "tags"
-}
+## variable "target" {
+##   description = "object for subdomains delegated to accounts"
+## }
+## 
+## variable "tags" {
+##   description = "tags"
+## }
 
 variable "default_tags" {
   description = "A map where the key is Environment and the value is the environment. Should be read from the environment and not passed directly."
