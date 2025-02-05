@@ -42,149 +42,145 @@ variable "default_tags" {
   default     = null
 }
 
-variable "forward_domain" {
+# variable "forward_domain" {
   type        = list(string)
   description = "list of domains"
-}
+# }
+# 
+# variable "forward_target_ips_us" {
+#   type = list(string)
+# }
+# 
+# variable "forward_target_ips_eu" {
+#   type = list(string)
+# }
+# 
+# variable "forward_domain_resourceone" {
+#   type        = list(string)
+#   description = "resourceone hosted in AWS"
+# }
+# 
+# variable "forward_domain_sztest" {
+#   type        = list(string)
+#   description = "sztest hosted in AWS"
+# }
+# 
+# variable "forward_target_ips_resourceone_eu" {
+#   type        = list(string)
+#   description = "Target IP for DNS hosted in AWS"
+# }
+# 
+# variable "forward_target_ips_sztest_eu" {
+#   type        = list(string)
+#   description = "Target IP for DNS hosted in AWS"
+# }
+# 
+# variable "phz_forward_domain_eu" {
+#   type        = list(string)
+#   description = "list of domains"
+# }
+# variable "phz_forward_domain_us" {
+#   type        = list(string)
+#   description = "list of domains"
+# }
+# 
+# variable "phz_forward_domain_eks_auth_eu" {
+#   type        = list(string)
+#   description = "list of domains"
+# }
+# 
+# variable "phz_forward_domain_eks_auth_us" {
+#   type        = list(string)
+#   description = "list of domains"
+# }
+# 
+# variable "phz_forward_domain" {
+#   type        = list(string)
+#   description = "list of domains"
+# }
+# 
+# variable "phz_forward_target_ips_us" {
+#   type = list(string)
+# }
+# 
+# variable "phz_forward_target_ips_eu" {
+#   type = list(string)
+# }
+# 
+# variable "uk_eq_internal_record" {
+# 
+# }
+# 
+# variable "us_eq_internal_record" {
+# 
+# }
+# 
+# variable "networkaccount_vpc" {
+# 
+# }
+# 
+# variable "domain_lists_eu" {
+#   description = "A map of domain lists with their attributes"
+#   type = map(object({
+#     domain_list_name  = string
+#     priority          = number
+#     managed_domain_id = string
+#   }))
+#   default = {
+#     list1 = {
+#       domain_list_name  = "AWSManagedDomainsAggregateThreatList"
+#       priority          = 1
+#       managed_domain_id = "rslvr-fdl-4e96d4ce77f466b"
+#     },
+#     list2 = {
+#       domain_list_name  = "AWSManagedDomainsAmazonGuardDutyThreatList"
+#       priority          = 2
+#       managed_domain_id = "rslvr-fdl-876a86d96f294739"
+#     }
+#     list3 = {
+#       domain_list_name  = "AWSManagedDomainsBotnetCommandandControl"
+#       priority          = 3
+#       managed_domain_id = "rslvr-fdl-3268f74d91fe418f"
+#     },
+#     list4 = {
+#       domain_list_name  = "AWSManagedDomainsMalwareDomainList"
+#       priority          = 4
+#       managed_domain_id = "rslvr-fdl-4fc4edfc63854751"
+#     },
+#   }
+# }
 
-variable "forward_target_ips_us" {
-  type = list(string)
-}
+# variable "domain_lists_us" {
+#   description = "A map of domain lists with their attributes"
+#   type = map(object({
+#     domain_list_name  = string
+#     priority          = number
+#     managed_domain_id = string
+#   }))
+#   default = {
+#     list1 = {
+#       domain_list_name  = "AWSManagedDomainsAggregateThreatList"
+#       priority          = 1
+#       managed_domain_id = "rslvr-fdl-15f4860b1ad54ead"
+#     },
+#     list2 = {
+#       domain_list_name  = "AWSManagedDomainsAmazonGuardDutyThreatList"
+#       priority          = 2
+#       managed_domain_id = "rslvr-fdl-984dae9d8bac4e2b"
+#     },
+#     list3 = {
+#       domain_list_name  = "AWSManagedDomainsBotnetCommandandControl"
+#       priority          = 3
+#       managed_domain_id = "rslvr-fdl-aa970e9eb1ca4777"
+#     },
+#     list4 = {
+#       domain_list_name  = "AWSManagedDomainsMalwareDomainList"
+#       priority          = 4
+#       managed_domain_id = "rslvr-fdl-2c46f2ecbfec4dcc"
+#     },
+#   }
+# }
 
-variable "forward_target_ips_eu" {
-  type = list(string)
-}
-
-variable "forward_domain_resourceone" {
-  type        = list(string)
-  description = "resourceone hosted in AWS"
-}
-
-variable "forward_domain_sztest" {
-  type        = list(string)
-  description = "sztest hosted in AWS"
-}
-
-variable "forward_target_ips_resourceone_eu" {
-  type        = list(string)
-  description = "Target IP for DNS hosted in AWS"
-}
-
-variable "forward_target_ips_sztest_eu" {
-  type        = list(string)
-  description = "Target IP for DNS hosted in AWS"
-}
-
-variable "phz_forward_domain_eu" {
-  type        = list(string)
-  description = "list of domains"
-}
-variable "phz_forward_domain_us" {
-  type        = list(string)
-  description = "list of domains"
-}
-
-variable "phz_forward_domain_eks_auth_eu" {
-  type        = list(string)
-  description = "list of domains"
-}
-
-variable "phz_forward_domain_eks_auth_us" {
-  type        = list(string)
-  description = "list of domains"
-}
-
-variable "phz_forward_domain" {
-  type        = list(string)
-  description = "list of domains"
-}
-
-variable "phz_forward_target_ips_us" {
-  type = list(string)
-}
-
-variable "phz_forward_target_ips_eu" {
-  type = list(string)
-}
-
-variable "uk_eq_internal_record" {
-
-}
-
-variable "us_eq_internal_record" {
-
-}
-
-variable "networkaccount_vpc" {
-
-}
-
-variable "domain_lists_eu" {
-  description = "A map of domain lists with their attributes"
-  type = map(object({
-    domain_list_name  = string
-    priority          = number
-    managed_domain_id = string
-  }))
-  default = {
-    list1 = {
-      domain_list_name  = "AWSManagedDomainsAggregateThreatList"
-      priority          = 1
-      managed_domain_id = "rslvr-fdl-4e96d4ce77f466b"
-    },
-    list2 = {
-      domain_list_name  = "AWSManagedDomainsAmazonGuardDutyThreatList"
-      priority          = 2
-      managed_domain_id = "rslvr-fdl-876a86d96f294739"
-    }
-    list3 = {
-      domain_list_name  = "AWSManagedDomainsBotnetCommandandControl"
-      priority          = 3
-      managed_domain_id = "rslvr-fdl-3268f74d91fe418f"
-    },
-    list4 = {
-      domain_list_name  = "AWSManagedDomainsMalwareDomainList"
-      priority          = 4
-      managed_domain_id = "rslvr-fdl-4fc4edfc63854751"
-    },
-  }
-}
-
-variable "domain_lists_us" {
-  description = "A map of domain lists with their attributes"
-  type = map(object({
-    domain_list_name  = string
-    priority          = number
-    managed_domain_id = string
-  }))
-  default = {
-    list1 = {
-      domain_list_name  = "AWSManagedDomainsAggregateThreatList"
-      priority          = 1
-      managed_domain_id = "rslvr-fdl-15f4860b1ad54ead"
-    },
-    list2 = {
-      domain_list_name  = "AWSManagedDomainsAmazonGuardDutyThreatList"
-      priority          = 2
-      managed_domain_id = "rslvr-fdl-984dae9d8bac4e2b"
-    },
-    list3 = {
-      domain_list_name  = "AWSManagedDomainsBotnetCommandandControl"
-      priority          = 3
-      managed_domain_id = "rslvr-fdl-aa970e9eb1ca4777"
-    },
-    list4 = {
-      domain_list_name  = "AWSManagedDomainsMalwareDomainList"
-      priority          = 4
-      managed_domain_id = "rslvr-fdl-2c46f2ecbfec4dcc"
-    },
-  }
-}
-
-variable "network_account_id" {
-  type    = string
-  default = "804833965518"
-}
 
 variable "kms_key_deletion" {
   type    = number
@@ -196,15 +192,15 @@ variable "shield_accounts" {
   default = []
 }
 
-variable "log_archive_account" {
-  type    = string
-  default = "737184837321"
-}
-
-variable "s3_bucket_arn" {
-  type    = string
-  default = "arn:aws:s3:::aws-accelerator-central-logs-737184837321-eu-west-2"
-}
+# variable "log_archive_account" {
+#   type    = string
+#   default = "737184837321"
+# }
+# 
+# variable "s3_bucket_arn" {
+#   type    = string
+#   default = "arn:aws:s3:::blvck93-aws-r53-phz-logs"
+# }
 
 variable "region_short_eu" {
   type    = string
