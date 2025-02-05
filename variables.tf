@@ -43,8 +43,8 @@ variable "default_tags" {
 }
 
 # variable "forward_domain" {
-  type        = list(string)
-  description = "list of domains"
+#  type        = list(string)
+#  description = "list of domains"
 # }
 # 
 # variable "forward_target_ips_us" {
