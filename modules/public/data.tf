@@ -8,7 +8,7 @@ data "aws_vpc" "central_endpoint_vpc" {
 
 data "aws_vpcs" "workload_vpc" {
   provider = aws.target
-  #filter {
-  #    name   = "tag:Accelerator"
-  #    values = ["AWSAccelerator"]
+  filter {
+    name   = "tag:Accelerator"
+     values = ["AWSAccelerator"]
 }
