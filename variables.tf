@@ -237,9 +237,9 @@ variable "domain_blacklist" {
 # }
 # 
 # variable "eq_internal_record_useast1" {
-  description = "eq_internal_record_useast1"
+#  description = "eq_internal_record_useast1"
 # }
 # 
 # variable "eks_auth_record_euwest2" {
-  description = "eks_auth_record_euwest2"
+#  description = "eks_auth_record_euwest2"
 # }
