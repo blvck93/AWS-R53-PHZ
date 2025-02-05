@@ -7,6 +7,7 @@ terraform {
   }
 }
 
+
 provider "aws" {
   alias  = "network_hub_eu"
   region = var.eu_region
