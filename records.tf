@@ -1,6 +1,7 @@
 data "aws_route53_zone" "blvck_ovh" {
     provider = aws.network_hub_us
     name = "blvck.ovh"
+    private_zone = false
 }
 
 resource "aws_route53_record" "blvck_ovh_a" {
