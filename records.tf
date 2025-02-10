@@ -35,3 +35,11 @@ resource "aws_route53_record" "coffee_blvck_ovh_cname" {
   ttl     = "300"
   records = ["google.com"]
 }
+
+resource "aws_route53_record" "kamil_blvck_ovh_cname" {
+  zone_id = data.aws_route53_zone.blvck_ovh.zone_id
+  name    = "kamil.blvck.ovh"
+  type    = "CNAME"
+  ttl     = "300"
+  records = ["google.com"]
+}
