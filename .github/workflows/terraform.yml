@@ -29,8 +29,8 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
-      - name: Terraform Import
-        run: terraform import  
+#      - name: Terraform Import
+#        run: terraform import  
 
       - name: Terraform Plan
         run: |
