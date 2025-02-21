@@ -7,6 +7,12 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      destroy:
+        description: "Set to 'true' to destroy infrastructure"
+        required: false
+        default: "false"
 
 jobs:
   terraform:
@@ -29,14 +35,16 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
-#      - name: Terraform Import
-#        run: terraform import  
-
       - name: Terraform Plan
+        if: github.event.inputs.destroy != 'true'
         run: |
           export TF_LOG=DEBUG
           terraform plan
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.event.inputs.destroy != 'true' && github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
+
+      - name: Terraform Destroy
+        if: github.event.inputs.destroy == 'true'
+        run: terraform destroy -auto-approve
